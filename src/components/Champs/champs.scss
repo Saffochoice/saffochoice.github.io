@@ -1,0 +1,88 @@
+.champs-component {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  .champ-item {
+    padding: 20px;
+    color: white;
+    background-color: rgb(146, 209, 226);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    .heading {
+      font-size: 2rem;
+      margin-bottom: 35px;
+      text-decoration: underline;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .container {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .score {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .name {
+        width: 120px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: gray;
+        font-size: 2rem;
+        font-weight: bold;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+
+        &.win {
+          background-color: rgb(96, 235, 114);
+          border-radius: 10px;
+        }
+        &.lost {
+          background-color: rgb(192, 57, 57);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .champs-component {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1160px) {
+  .champs-component {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 780px) {
+  .champs-component {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 412px) {
+  .champs-component {
+    grid-template-columns: repeat(1, 1fr);
+    .champ-item {
+      .container {
+        .name {
+          width: 80px;
+          height: 80px;
+
+        }
+      }
+    }
+  }
+}
